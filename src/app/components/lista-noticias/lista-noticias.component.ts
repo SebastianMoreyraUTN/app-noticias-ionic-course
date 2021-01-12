@@ -8,6 +8,7 @@ import { Article } from "../../interfaces/interfaces";
 })
 export class ListaNoticiasComponent implements OnInit {
   @Input() articles: Article[];
+  @Input() favorito: boolean = false;
   constructor() {}
 
   ngOnInit() {}

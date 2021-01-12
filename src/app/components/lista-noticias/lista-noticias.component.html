@@ -2,7 +2,8 @@
   <ion-row>
     <ion-col size-lg="4" size="12" *ngFor="let article of articles; let i = index">
       <app-noticia [index]="i"
-                   [article]="article"></app-noticia>
+                   [article]="article"
+                   [favorito]="favorito"></app-noticia>
     </ion-col>
   </ion-row>
 </ion-grid>

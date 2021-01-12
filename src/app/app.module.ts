@@ -9,7 +9,10 @@ import { StatusBar } from "@ionic-native/status-bar/ngx";
 import { AppRoutingModule } from "./app-routing.module";
 import { AppComponent } from "./app.component";
 import { HttpClientModule } from "@angular/common/http";
-
+import { InAppBrowser } from "@ionic-native/in-app-browser/ngx";
+import { SocialSharing } from "@ionic-native/social-sharing/ngx";
+import { IonicStorageModule } from "@ionic/storage";
+import { DataLocalService } from "./services/data-local.service";
 @NgModule({
   declarations: [AppComponent],
   entryComponents: [],
@@ -18,11 +21,15 @@ import { HttpClientModule } from "@angular/common/http";
     IonicModule.forRoot(),
     AppRoutingModule,
     HttpClientModule,
+    IonicStorageModule.forRoot(),
   ],
   providers: [
     StatusBar,
     SplashScreen,
+    InAppBrowser,
+    SocialSharing,
     { provide: RouteReuseStrategy, useClass: IonicRouteStrategy },
+    DataLocalService,
   ],
   bootstrap: [AppComponent],
 })
